@@ -1,0 +1,147 @@
+//swiper
+
+.team {
+   margin-top: 60px;
+   
+
+   @media screen and (min-width: $breakpoint-md) {
+      margin-top: 60px;
+   }
+
+
+   // .team__swiper
+
+   &__swiper {
+      
+   }
+
+   // .team__slide
+
+   &__slide {
+      border-radius: 12px;
+      overflow: hidden;
+      @media screen and (min-width: $breakpoint-lg) {
+         display: flex;
+
+      }
+   }
+
+   // .team__image
+
+	&__image {
+		height: 500px;
+		position: relative;
+		img {
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		@media screen and (min-width: 1024px) {
+			height: auto;
+			flex: 1 0 400px;
+		}
+	}
+
+   // .team__inner
+
+   &__inner {
+      background: $bg_color;
+      padding: 30px;
+
+   }
+
+
+   // .team__inner-link
+
+   &__inner-link {
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: $regular_color;
+      text-decoration: none;
+      margin-bottom: 30px;
+      position: relative;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 3px;
+         right: -7px;
+         width: 6px;
+         height: 6px;
+         border-bottom: 2px solid $regular_color;
+         border-left: 2px solid $regular_color;
+         transform: rotate(-134deg);
+      }
+
+      &:hover {
+         color: $accent_color ;
+      }
+
+      &:hover::before {
+         border-bottom: 2px solid $accent_color;
+         border-left: 2px solid $accent_color;
+      }
+   }
+
+   // .team__inner-title
+
+   &__inner-title {
+      margin-top: 30px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+      background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
+
+   // .team__inner-name
+
+   &__inner-name {
+      margin-top: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: $text_color;
+
+      p+p {
+         margin-top: 6px;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 22px;
+      }
+   }
+
+   .main {
+      position: relative;
+      padding-bottom: 60px;
+   }
+   
+   
+   &__swiper-pagination {
+		&.swiper-pagination {
+         padding-bottom: 30px;
+         position: absolute;
+         bottom: -10px;
+         left: 0;
+		}
+
+		.swiper-pagination-bullet {
+			width: 18px;
+			height: 18px;
+         background-color: $regular_color;
+			&.swiper-pagination-bullet-active {
+				background: $regular_color;
+			}
+		}
+
+	}
+}
+
+

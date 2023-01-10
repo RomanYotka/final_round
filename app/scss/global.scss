@@ -1,0 +1,72 @@
+body {
+	font-family: 'Montserrat';
+	font-weight: 400;
+}
+
+.hidden {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.container {
+	padding: 0 30px;
+
+	@media screen and (min-width: $breakpoint-md) {
+		// from 768px to 1023px
+		// размер блока по тз(контент)
+		max-width: 648px;
+		//*для контента ниже, в слудеющий медиа запрос не нужно вставлять, унаследуется с этого блока 
+		//! margin 0 auto -работает только с ограниченой шириной 
+		margin: 0 auto;
+	}
+
+	@media screen and (min-width: $breakpoint-lg) {
+		// from 1024px to 1443зpx
+		// размер блока по тз(контент)
+		max-width: 904px;
+	}
+
+	@media screen and (min-width: $breakpoint-xl) {
+		// from 1440px to 1919px
+		// размер блока по тз(контент)
+		max-width: 1320px;
+	}
+
+	@media screen and (min-width: $breakpoint-xxl) {
+		// from 1920px ~
+		// размер блока по тз(контент)
+		max-width: 1600px;
+	}
+}
+
+.main-title {
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 46px;
+}
+
+.wrapper {
+	background: $gradient_supersoft;
+	border-radius: 0px 0px 12px 12px;
+	position: relative;
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 20px;
+		right: 20px;
+		height: 10px;
+		background:  #CACADB;
+		border-radius: 0px 0px 12px 12px;
+	}
+	&::after {
+		bottom: -20px;
+		left: 40px;
+		right: 40px;
+		background: #E7E7F2;
+	}
+}
+

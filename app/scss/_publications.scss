@@ -1,0 +1,139 @@
+// publications
+
+.publications {
+   background: $bg-color;
+   padding-top: 30px;
+   // .publications__box
+
+   &__box {}
+
+   // .publications__inner
+
+   &__inner {}
+
+   // .publications__link
+
+   &__link {
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: $regular_color;
+      text-decoration: none;
+      margin-bottom: 30px;
+      position: relative;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 3px;
+         right: -9px;
+         width: 7px;
+         height: 7px;
+         border-bottom: 2px solid $regular_color;
+         border-left: 2px solid $regular_color;
+         transform: rotate(-134deg);
+      }
+
+      &:hover {
+         color: $accent_color ;
+      }
+
+      &:hover::before {
+         border-bottom: 2px solid $accent_color;
+         border-left: 2px solid $accent_color;
+      }
+   }
+
+   // .publications__tittle
+
+   &__tittle {
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+      background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
+
+   // .publications__cards
+
+   &__cards {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+   }
+
+   // .publications__card
+
+   &__card {
+      background: $bg-items;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 5px;
+      flex: 1 1 100%;
+
+      @media screen and (min-width: $breakpoint-md) {
+         flex: 1 1 47%;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 1 1 30%;
+      }
+   }
+
+   // .publications__picture
+
+   &__picture {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+   }
+
+   // .publications__name
+
+   &__name {
+      margin-top: 30px;
+      padding: 0 30px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      color: $regular_color;
+   }
+
+   // .publications__date
+
+   &__date {
+      padding: 15px 30px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      color: $text_color;
+   }
+
+   // .publications__text
+
+   &__text {
+      border-top: 4px solid #E6E6F0;
+      margin: 0 30px;
+      padding-top: 15px;
+      padding-bottom: 30px;
+      font-size: 14px;
+      line-height: 22px;
+   }
+
+   // .publications__last-card
+
+   &__last-card {
+      @media screen and (min-width: $breakpoint-md) {
+         flex: 1 1 100%;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 1 1 30%;
+      }
+   }
+}

@@ -1,0 +1,130 @@
+// custimers
+
+.customers {
+   margin-top: 30px;
+   @media screen and (min-width: $breakpoint-xxl) {
+      margin-bottom: 40px;
+   }
+   // .customers__inner
+
+   &__inner {
+   
+   }
+
+   // .customers__title
+
+   &__title {
+      margin-top: 60px;
+   }
+
+   // .customers__title-text
+
+   &__title-text {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $main_color;
+   }
+
+   // .customers__box-container
+
+   &__box-container {
+      margin-top: 30px;
+   }
+
+   // .customers__cards
+
+   &__cards {
+      display: flex;
+      flex-flow: column;
+
+      @media screen and (min-width: $breakpoint-md) {
+         flex-flow: wrap;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+
+   // .customers__company
+
+   &__company {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (min-width: $breakpoint-md) {
+         width: 256px;
+         height: 120px;
+      }
+
+      @media screen and (min-width: $breakpoint-xl) {
+         width: 360px;
+         height: 120px;
+      }
+
+      @media screen and (min-width: $breakpoint-xxl) {
+         width: 430px;
+         height: 120px;
+      }
+   }
+
+   .clickky, .ecolease, .infratek, .sitypark, .artprint, .ultimatecard {
+      display: none;
+      @media screen and (min-width: $breakpoint-md) {
+         display: flex;
+      }
+   }
+
+   .hillel {
+      background: #1C4280;
+   }
+
+   .wannabiz {
+      background: #143646;
+   }
+
+   .tapgerine {
+      background: #F48B30;
+   }
+
+   .dlook {
+      background: #9E4DC3;
+   }
+
+   .arangear {
+      background: #F48B30;
+   }
+
+   .adtelligent {
+      background: #E2E2E4;
+   }
+
+   .clickky {
+      background: #C71C36;
+   }
+
+   .ecolease {
+      background: #DCF3F9;
+   }
+
+   .infratek {
+      background: #EAEAEA;
+   }
+
+   .sitypark {
+      background: #282240;
+   }
+
+   .artprint {
+      background: #1D4568;
+   }
+
+   .ultimatecard {
+      background: #000000;
+   }
+}
+

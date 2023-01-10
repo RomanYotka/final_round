@@ -1,0 +1,57 @@
+//Cards
+
+.cards {
+   margin-top: 30px;
+   padding-bottom: 60px;
+   // align-items: center;
+
+   @media screen and (min-width: $breakpoint-md) {
+      display: flex;
+      flex-flow: wrap;
+      gap: 60px;
+      margin-top: 60px;
+
+   }
+
+   &__card {
+      margin-bottom: 30px;
+
+
+      @media screen and (min-width: $breakpoint-md) {
+         flex: 1 1 30%;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 1 1 20%;
+      }
+
+      @media screen and (min-width: $breakpoint-xl) {
+         flex: 1 1 30%;
+      }
+   }
+
+
+   &__card-icon {
+      width: 92px;
+      height: 92px;
+   }
+
+
+   &__card-title {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      color: $regular_color;
+      margin-top: 30px;
+   }
+
+   &__card-content {
+      padding-top: 15px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: $bg-items;
+      
+   }
+
+}

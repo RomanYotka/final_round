@@ -1,0 +1,141 @@
+.tab {
+   margin-top: 30px;
+   position: relative;
+   align-items: center;
+
+
+   @media screen and (min-width: $breakpoint-md) {
+      margin-top: 60px;
+   }
+
+   @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      gap: 124px;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 44%;
+         width: 4px;
+         height: 100%;
+         background: rgba(255, 255, 255, 0.3);
+
+         @media screen and (min-width: $breakpoint-xl) {
+            left: 30%;
+
+         }
+
+         @media screen and (min-width: $breakpoint-xxl) {
+            left: 23%;
+
+         }
+      }
+   }
+
+   hr {
+      border: 0;
+      background: rgba(255, 255, 255, 0.3);
+      height: 4px;
+
+      @media screen and (min-width: $breakpoint-lg) {
+         display: none;
+      }
+   }
+
+   &__box {
+      overflow-x: auto;
+
+      @media screen and (min-width: $breakpoint-lg) {
+         overflow-x: none;
+      }
+
+   }
+
+   ::-webkit-scrollbar {
+      width: 0px;
+   }
+
+   // .tab__list
+   &__list {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      white-space: nowrap;
+
+
+      @media screen and (min-width: $breakpoint-lg) {
+         flex-direction: column;
+         text-align: right;
+      }
+
+   }
+
+   // .tab__items
+
+   &__items {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+      color: $text_color;
+      cursor: pointer;
+      transition: .2s linear;
+
+      &:hover {
+         color: $accent_color;
+
+      }
+
+
+      &.active {
+         background: $gradient_red_text;
+         background-clip: text;
+         // !без вебкит не применяется
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+
+   }
+
+   &__body {
+      margin-top: 60px;
+
+      @media screen and (min-width: $breakpoint-lg) {
+         margin-top: 5px;
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         text-align: left;
+      }
+
+   }
+
+   // .tab__block
+
+   &__block {
+      display: none;
+
+      &.active {
+         display: block;
+      }
+   }
+
+   // .tab__title
+
+   &__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: $bg-items;
+
+   }
+
+   &__text {
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 30px;
+      color: $bg-items;
+      margin-top: 30px;
+   }
+
+}
